@@ -122,10 +122,10 @@ evaluate Map.empty em
 //   let rec filter = (fun f -> fun l -> 
 //     match l with 
 //     | Case1 t -> 
-//          if f x#1 then Case1(x#1, (map f) x#2) 
-//          else (map f) x#2
+//          if f x#1 then Case1(x#1, (filter f) x#2) 
+//          else (filter f) x#2
 //     | Case2(Unit) -> Case2(Unit))
-//   in map (fun y -> y + (-2)) l
+//   in filter (fun y -> y + (-2)) l
 //
 let ef = failwith "not implemented"
 evaluate Map.empty ef
